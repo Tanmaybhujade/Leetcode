@@ -48,9 +48,7 @@ public:
     // We'll also need to remember d_last_even and d_last_odd (e.g. sgn)
     // because the idea is to continue those wiggles after a pause.
     //
-    // and then we'll need to know sgn( nums[ i ] - nums[ i - 1 ] )
-    //
-    // to add one to either score, the sgn must not be 0, and must be the
+
   
 
     if (nums.empty()) {
