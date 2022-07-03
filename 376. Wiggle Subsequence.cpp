@@ -53,7 +53,7 @@ public:
     // and then we'll need to know sgn( nums[ i ] - nums[ i - 1 ] )
     //
     // to add one to either score, the sgn must not be 0, and must be the
-    // opposite in sign to d_even_last and d_odd_last, respectively.
+  
 
     if (nums.empty()) {
       return 0;
