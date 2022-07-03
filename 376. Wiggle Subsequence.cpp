@@ -18,7 +18,7 @@ public:
     // - A better DP solution is to use a vector to add up the
     //   wiggles up until a particular index, i.
     // - While there might not be a wiggle at index 0, if there is, the
-    //   length still counts toward the longest length
+    //   length sti
     // - It would be wise to check two different vectors, sort of like
     //   even / odd, in which case, you expect i + 1 to be greater than i
     //   and another where you expect i + 1 to be less than i.
