@@ -15,7 +15,7 @@ public:
     //   -> O( N 2^N ) time and O( 2^N ) space
     //   -> we *CAN* do better ;-)
     // - A vector of length < 1 will have 0 wiggle sequences
-    // - A vector of length 1 will have 1 wiggle sequences
+   s
     // - The first wiggle sequence in a vector of length >= 2 will only
     //   count if the first two elements differ by something other than 0.
     // - A better DP solution is to use a vector to add up the
