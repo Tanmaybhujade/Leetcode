@@ -22,7 +22,7 @@ public:
     // - It would be wise to check two different vectors, sort of like
     //   even / odd, in which case, you expect i + 1 to be greater than i
     //   and another where you expect i + 1 to be less than i.
-    // - E.g nums = [ 1,17, 5,10,13,15,10, 5,16, 8]
+  
     // - If we take out all of the non-wiggle parts, then the longest wiggle is
     //   7 elements long    [1,17,5,10,         5,16,8]. There might be other
     //   wiggles that are 7 elements long  in the vector though. We don't need
