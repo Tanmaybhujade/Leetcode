@@ -13,9 +13,6 @@ public:
     //   -> Generate all possible subsequences O( 2^N )
     //   -> Count the number of wiggles in each O( N ), saving the longest
     //   -> O( N 2^N ) time and O( 2^N ) space
-    //   -> we *CAN* do better ;-)
-    es
-   s
     // - The first wiggle sequence in a vector of length >= 2 will only
     //   count if the first two elements differ by something other than 0.
     // - A better DP solution is to use a vector to add up the
