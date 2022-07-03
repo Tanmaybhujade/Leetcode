@@ -45,10 +45,7 @@ public:
     //
     // even[ 0 ] = odd[ 0 ] = nums[ 1 ] - nums[ 0 ] > 0;
     //
-    // We'll also need to remember d_last_even and d_last_odd (e.g. sgn)
-    // because the idea is to continue those wiggles after a pause.
-    //
-
+  
   
 
     if (nums.empty()) {
