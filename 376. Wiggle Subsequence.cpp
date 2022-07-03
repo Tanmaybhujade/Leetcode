@@ -14,7 +14,7 @@ public:
     //   -> Count the number of wiggles in each O( N ), saving the longest
     //   -> O( N 2^N ) time and O( 2^N ) space
     //   -> we *CAN* do better ;-)
-    // - A vector of length < 1 will have 0 wiggle sequences
+    es
    s
     // - The first wiggle sequence in a vector of length >= 2 will only
     //   count if the first two elements differ by something other than 0.
