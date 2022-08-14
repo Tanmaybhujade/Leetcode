@@ -1,48 +1,110 @@
-class Solution {
+
+
+
+class Solution
+{
 public:
-    vector<vector<string>> findLadders(string beginWord, string endWord, vector<string>& wordList) {
-        vector<vector<string>> res;
-        unordered_set<string> visit;  //notice we need to clear visited word in list after finish this level of BFS
-        queue<vector<string>> q;
-        unordered_set<string> wordlist(wordList.begin(),wordList.end());
+    vector<vector<string>> findLadders(string beginWord, string endWord, vector<string> &wordList)
+    {
+        unordered_set<string> wordSet(wordList.begin(), wordList.end());
+        unordered_map<string, int> distMap;
+
+        queue<string> q;
+        int k = beginWord.size();
         q.push({beginWord});
-        bool flag= false; //to see if we find shortest path
-        while(!q.empty()){
-            int size= q.size();
-            for(int i=0;i<size;i++){            //for this level
-                vector<string> cur = q.front();
+        distMap[beginWord] = 0;
+
+        // BFS to calculate distances
+        while (!q.empty())
+        {
+            int qLen = q.size();
+            for (int i = 0; i < qLen; i++)
+            {
+                string currWord = q.front();
                 q.pop();
-                vector<string> newadd =  addWord(cur.back(),wordlist); 
-                for(int j=0;j<newadd.size();j++){   //add a word into path
-                    vector<string> newline(cur.begin(),cur.end());
-                    newline.push_back(newadd[j]);
-                    if(newadd[j]==endWord){       
-                     flag=true;
-                    res.push_back(newline);
+                int x = distMap[currWord] + 1;
+                for (int j = 0; j < k; j++)
+                {
+                    char origChar = currWord[j];
+                    for (char nextChar = 'a'; nextChar <= 'z'; nextChar++)
+                    {
+                        currWord[j] = nextChar;
+                        if (distMap.count(currWord) == 0 &&
+                            wordSet.count(currWord) != 0) {
+                            distMap[currWord] = x;
+                            q.push(currWord);
+                        }
                     }
-                    visit.insert(newadd[j]);
-                    q.push(newline);
+                    currWord[j] = origChar;
                 }
             }
-            if(flag) break;  //do not BFS further 
-            for(auto it=visit.begin();it!=visit.end();it++) wordlist.erase(*it); //erase visited one 
-            visit.clear();
         }
+
+        vector<string> currPath;
+        vector<vector<string>> res;
+
+        if (distMap.count(endWord) != 0)
+            dfs(endWord, beginWord, currPath, res, distMap);
         return res;
     }
-    
-    // find words with one char different in dict
-    // hot->[dot,lot]
-    vector<string> addWord( string word,unordered_set<string>& wordlist ){
-        vector<string> res;
-        for(int i=0;i<word.size();i++){
-            char s =word[i];
-            for(char c='a';c<='z';c++){
-                word[i]=c;
-                if(wordlist.count(word)) res.push_back(word);
+
+    // DFS to get paths
+    void dfs(string word, string beginWord, vector<string>& currPath, vector<vector<string>>& res, unordered_map<string, int>& distMap)
+    {
+        currPath.push_back(word);
+        if (word == beginWord)
+        {
+            vector<string> x = currPath;
+            reverse(x.begin(), x.end());
+            res.push_back(x);
+            currPath.pop_back();
+            return;
+        }
+        int cur = distMap[word];
+        for (int i = 0; i < word.size(); i++)
+        {
+            char c = word[i];
+            for (char cc = 'a'; cc <= 'z'; cc++)
+            {
+                word[i] = cc;
+                if (distMap.count(word) && distMap[word] == cur - 1)
+                    dfs(word, beginWord, currPath, res, distMap);
             }
-            word[i]=s;
+            word[i] = c;
         }
-        return res;
+        currPath.pop_back();
     }
+
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
