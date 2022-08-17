@@ -1,4 +1,4 @@
-class Solution {
+class Solution {/
 public:
     bool column(int col, int n, vector<string> temp){
         for(int i = 0; i < n; i++){
