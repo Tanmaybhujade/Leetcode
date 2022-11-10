@@ -14,7 +14,6 @@ class Solution {
         StringBuilder sb=new StringBuilder();
         for(char ss : st) sb.append(ss);
         return sb.toString();
-        //while(!st.isEmpty())sb.append(st.pop());
-        /
+        //while(!st.isEmpty())sb.append(st
     }
 }
