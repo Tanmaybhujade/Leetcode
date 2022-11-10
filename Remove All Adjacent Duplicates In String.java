@@ -3,7 +3,7 @@ class Solution {
         Stack<Character> st=new Stack<>();
         char ch[]=s.toCharArray();
         for(char c:ch){
-            //check if top of stack is equal to this character
+            
 			
             if(!st.isEmpty() && st.peek()==c)st.pop();
             else{
@@ -14,6 +14,6 @@ class Solution {
         StringBuilder sb=new StringBuilder();
         for(char ss : st) sb.append(ss);
         return sb.toString();
-        //wh
+        
     }
 }
