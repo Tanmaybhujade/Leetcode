@@ -14,6 +14,6 @@ class Solution {
         StringBuilder sb=new StringBuilder();
         for(char ss : st) sb.append(ss);
         return sb.toString();
-        //while(!
+        //wh
     }
 }
