@@ -1,4 +1,4 @@
-class Solution {f
+class Solution {
     public List<List<Integer>> findWinners(int[][] matches) {
         Map<Integer, Integer> map = new HashMap<>();
         
