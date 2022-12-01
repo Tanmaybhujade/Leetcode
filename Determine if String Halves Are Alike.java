@@ -1,4 +1,4 @@
-kclass Solution {
+class Solution {
     public boolean halvesAreAlike(String s) {
         int count = 0;
         String s1 = s.substring(0,s.length()/2);
