@@ -1,4 +1,4 @@
-class Solution {mnm
+class Solution {m
     public boolean closeStrings(String word1, String word2) 
     {
         int []str1 = new int[26];
