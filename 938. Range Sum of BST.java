@@ -1,4 +1,4 @@
-class Solution {m
+class Solution {
     public int rangeSumBST(TreeNode root, int low, int high) {
         int ans=0;
         if(root==null)
