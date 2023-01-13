@@ -72,4 +72,6 @@ class DFSLabelCounter {
 
     public int[] counts() {
         return counts;
+    }
+}
     
