@@ -16,4 +16,4 @@ public:
         return score;   
     }
 };
-ta
+t
