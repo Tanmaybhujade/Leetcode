@@ -4,7 +4,7 @@ class Solution {
 
         for(int i=0;i<26;i++){
             initial_group[i]=new HashSet<>();
-tanmay
+tanma
         }
 
         for(String idea:ideas){
