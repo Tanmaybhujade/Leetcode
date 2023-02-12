@@ -2,7 +2,7 @@ class Solution {
 public:
     vector<vector<int>> substringXorQueries(string s, vector<vector<int>>& queries) {
         unordered_map<int, pair<int, int>> mp;
-        //filling the map
+       
         for(auto i: queries){
             mp[i[0] ^ i[1]] = {INT_MAX, INT_MAX};
         }
