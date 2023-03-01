@@ -20,7 +20,7 @@ public int[] sortArray(int[] arr) {
         countArray[i-min]++;    
     
     
-    // modifyg current index value with its previous index vlaues
+    // modifyg current index value with its previous 
     for(int i=1; i<range; i++)
         countArray[i] += countArray[i-1];
     
