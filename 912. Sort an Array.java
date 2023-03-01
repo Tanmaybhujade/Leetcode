@@ -25,7 +25,7 @@ public int[] sortArray(int[] arr) {
         countArray[i] += countArray[i-1];
     
     
-    // filling values in output array using original array by traversing it fro
+    // filling values in output array usi
     for(int i=n-1; i>=0; i--){
         // int val = countArray[arr[i]-min]-1;
         output[countArray[arr[i]-min]-1] = arr[i];
