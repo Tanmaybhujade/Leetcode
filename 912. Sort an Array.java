@@ -15,7 +15,7 @@ public int[] sortArray(int[] arr) {
     int output[] = new int[n];
     
   
-    */
+    
     for(int i: arr)
         countArray[i-min]++;    
     
@@ -33,7 +33,7 @@ public int[] sortArray(int[] arr) {
     }
     
    
-    // copying out 
+    // copying o
     for(int i=0; i<n; i++)
         arr[i] = output[i];
     
