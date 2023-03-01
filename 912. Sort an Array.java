@@ -33,7 +33,7 @@ public int[] sortArray(int[] arr) {
     }
     
    
-    // copying
+    // copy
     for(int i=0; i<n; i++)
         arr[i] = output[i];
     
