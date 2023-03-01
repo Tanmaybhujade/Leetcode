@@ -17,7 +17,7 @@ public int[] sortArray(int[] arr) {
     // find the count  
     /*
         Note:
-        Here I am subtracting with min, in order to deal wits
+        Here I am subtracting with min, in oal wits
     */
     for(int i: arr)
         countArray[i-min]++;    
