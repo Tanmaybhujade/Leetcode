@@ -14,10 +14,7 @@ public int[] sortArray(int[] arr) {
     int countArray[] = new int[range];
     int output[] = new int[n];
     
-    // find the count  
-    /*
-        Note:
-        Here 
+  
     */
     for(int i: arr)
         countArray[i-min]++;    
