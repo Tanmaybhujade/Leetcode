@@ -14,7 +14,7 @@ public int[] sortArray(int[] arr) {
     int countArray[] = new int[range];
     int output[] = new int[n];
     
-    // find the count of every em 
+    // find the count  
     /*
         Note:
         Here I am subtracting with min, in order to deal with all -ve values
