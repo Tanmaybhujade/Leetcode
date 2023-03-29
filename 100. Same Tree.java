@@ -18,3 +18,4 @@ class Solution {
         in(l1,node.right,a++);
     }
 }
+12
