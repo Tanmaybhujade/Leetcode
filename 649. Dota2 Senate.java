@@ -1,5 +1,4 @@
 class Solution {
-
 public String predictPartyVictory(String s)
 
 {
@@ -22,5 +21,5 @@ public String predictPartyVictory(String s)
            return "Radiant";
         else
                 return "Dire";
-}
+   }
 }
