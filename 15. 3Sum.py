@@ -19,5 +19,4 @@ class Solution:
                     r -= 1
 
         return solution 
-    Tab
-tab
+    
