@@ -15,5 +15,5 @@ public class Solution {
             return a;
     }
 }
-ta
+tan
 
